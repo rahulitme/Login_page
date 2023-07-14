@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            width: 300px;
+            border: 1px solid red;
+            margin: auto;
+            padding: 20px;
+            box-shadow: 6px  5px 20px 30px royalblue,12px 3px 50px yellow, 6px 3px 2px 40px bisque;
+            text-align: center;
+            ;
+        }
+        #manu{
+            background: lavenderblush;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+          <div id="manu">
+        <h1>Login Page</h1>
+        
+       
+        <form action="RegisterServlet" method="post">
+            <table>
+                <tr>
+                    <td>Enter your name:</td>
+                    <td><input type="text" id="Name" name="user_name" placeholder="Enter your name"></td>
+                </tr>
+                <tr>
+                    <td>Enter your email:</td>
+                    <td><input type="text" id="Mail" name="user_mail" placeholder="Enter your email"></td>
+                </tr>
+                <tr>
+                    <td>Enter your password:</td>
+                    <td><input type="password" id="Pass" name="user_password" placeholder="Enter your password"></td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td>
+                        <input type="radio" name="user_gender" value="male"> Male
+                        <input type="radio" name="user_gender" value="female"> Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>Select your course:</td>
+                    <td>
+                        <select name="user_course">
+                            <option value="python">Python</option>
+                            <option value="java">Java</option>
+                            <option value="cpp">C++</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="condition" value="checked"> Agree to terms and conditions
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center">
+                        <button type="submit">Register</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+        </div>
+    
+    
+        <script>
+var targetName = document.querySelector("#Name");
+targetName.addEventListener('cut', function() {
+  console.clear();
+  console.log("You cut text");
+  targetName.style.background = "yellow";
+});
+
+var targetMail = document.querySelector("#Mail");
+targetMail.addEventListener('copy', function() {
+  console.clear();
+  console.log("You copied text");
+  targetMail.style.background = "green";
+});
+
+var targetPass = document.querySelector("#Pass");
+targetPass.addEventListener('paste', function() {
+  console.clear();
+  console.log("You pasted text");
+  targetPass.style.background = "red";
+});
+
+    </script>
+    
+    
+    
+</body>
+</html>
